@@ -57,7 +57,7 @@ class Single_post extends StatelessWidget {
           ),
           actions: <Widget>[
             Container(
-              margin: EdgeInsets.only(left: 10),
+              margin: EdgeInsets.only(right: 10),
               child: IconButton(
                 icon: Icon(
                   MyIcons.share__1_,
@@ -111,7 +111,7 @@ class Single_post extends StatelessWidget {
                         width : 40,
                         height: 40,
 
-                        margin: EdgeInsets.only(left: 12),
+                        margin: EdgeInsets.only(right: 12),
                         decoration: BoxDecoration(
                         ),
                         child: ClipRRect(
@@ -125,12 +125,12 @@ class Single_post extends StatelessWidget {
                           Container(
                             margin: EdgeInsets.only(bottom: 1),
                             height: 22,
-                            padding: EdgeInsets.only(left: 6),
+                            padding: EdgeInsets.only(right: 6),
                             alignment: Alignment.center,
                             child: Row(
                               children: <Widget>[
                                 Text(
-                                  "بواسطة " + auther,
+                                  "By " + auther,
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     color: Colors.black45,
@@ -146,11 +146,11 @@ class Single_post extends StatelessWidget {
                             children: <Widget>[
                               Container(
                                 height: 22,
-                                padding: EdgeInsets.only(left: 6),
-                                alignment: Alignment.centerRight,
+                                padding: EdgeInsets.only(right: 6),
+                                alignment: Alignment.centerLeft,
                                 child: Text(
-                                  "في " + cat,
-                                  textAlign: TextAlign.right,
+                                  "in " + cat,
+                                  textAlign: TextAlign.left,
                                   style: TextStyle(
                                     fontSize: 14,
                                     color: Colors.black45,
@@ -160,7 +160,7 @@ class Single_post extends StatelessWidget {
                               Container(
                                 height: 22,
 
-                                alignment: Alignment.centerRight,
+                                alignment: Alignment.centerLeft,
                                 child: Text(
                                   "|",
                                   textAlign: TextAlign.center,
@@ -176,7 +176,7 @@ class Single_post extends StatelessWidget {
                                 padding: EdgeInsets.only(left: 6, right: 6),
                                 alignment: Alignment.center,
                                 child: Text(
-                                  "تاريخ النشر " + date,
+                                  "On " + date,
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     color: Colors.black45,

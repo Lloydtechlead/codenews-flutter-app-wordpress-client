@@ -260,22 +260,22 @@ class _postsBycatState extends State<postsBycat> {
 
         header: WaterDropHeader(
           waterDropColor: maincolors().maincolor,
-          complete: Text("تم التحديث!"),
+          complete: Text("All Updated!"),
         ),
         footer: CustomFooter(
           loadStyle: LoadStyle.ShowWhenLoading,
           builder: (BuildContext context, LoadStatus mode) {
             Widget body;
             if (mode == LoadStatus.idle) {
-              body = Text("لا يوجد المزيد");
+              body = Text("No more news");
             } else if (mode == LoadStatus.loading) {
               body = CupertinoActivityIndicator();
             } else if (mode == LoadStatus.failed) {
-              body = Text("فشل تحميل الاخبار! حاول مجدداً");
+              body = Text("News failed to download! Try againً");
             } else if (mode == LoadStatus.canLoading) {
-              body = Text("افلت لمشاهدة المزيد من الاخبار");
+              body = Text("release to see more news");
             } else {
-              body = Text("لا توجد اخبار اخرى");
+              body = Text("no more news");
             }
             return Container(
               height: 55.0,
@@ -341,10 +341,10 @@ class _postsBycatState extends State<postsBycat> {
                           ),
                           Container(
                             margin: EdgeInsets.only(bottom: 10, top: 10),
-                            width: 250,
-                            alignment: Alignment.bottomRight,
+
+                            alignment: Alignment.bottomLeft,
                             child: RichText(
-                              textAlign: TextAlign.right,
+                              textAlign: TextAlign.left,
                               overflow: TextOverflow.ellipsis,
                               maxLines: 2,
                               text: TextSpan(
@@ -383,7 +383,7 @@ class _postsBycatState extends State<postsBycat> {
                                   ),
                                   Container(
                                     height: 22,
-                                    margin: EdgeInsets.only(right: 5),
+                                    margin: EdgeInsets.only(left: 5),
                                     padding: EdgeInsets.only(left: 6, right: 6),
                                     alignment: Alignment.center,
                                     decoration: BoxDecoration(

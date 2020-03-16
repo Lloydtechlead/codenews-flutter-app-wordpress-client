@@ -109,12 +109,12 @@ Widget buildPost(context,int index) {
                     children: <Widget>[
                       Container(
                         margin: EdgeInsets.only(bottom: 10, top: 10),
-                        alignment: Alignment.bottomRight,
+                        alignment: Alignment.bottomLeft,
                         child: Text(
                           posts[index].title.rendered,
-                          textAlign: TextAlign.right,
+                          textAlign: TextAlign.left,
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 22,
                             fontFamily: 'Kufi',
                             color: Colors.white,
                             fontWeight: FontWeight.w700,
@@ -149,7 +149,7 @@ Widget buildPost(context,int index) {
                               ),
                               Container(
                                 height: 22,
-                                margin: EdgeInsets.only(right: 5),
+                                margin: EdgeInsets.only(left: 5),
                                 padding: EdgeInsets.only(left: 6, right: 6),
                                 alignment: Alignment.center,
                                 decoration: BoxDecoration(
@@ -220,22 +220,24 @@ Widget buildPost(context,int index) {
                     child: buildImage(index),
                   ),
                   Container(
-                    margin: EdgeInsets.only(right: 15),
+                    margin: EdgeInsets.only(left: 15),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Container(
                           margin: EdgeInsets.only(bottom: 1, top: 10),
-                          width: 170,
-                          alignment: Alignment.centerRight,
+                          width: 150,
+                          alignment: Alignment.centerLeft,
                           child: RichText(
-                            textAlign: TextAlign.right,
+                            textAlign: TextAlign.left,
                             overflow: TextOverflow.ellipsis,
-                            maxLines: 3,
+                            maxLines: 5,
+
                             text: TextSpan(
                                 text: posts[index].title.rendered,
                                 style: TextStyle(
+
                                   fontSize: 17,
                                   fontFamily: 'Kufi',
                                   color: maincolors().maincolor,
@@ -247,10 +249,10 @@ Widget buildPost(context,int index) {
                           margin: EdgeInsets.only(
                             bottom: 10,
                           ),
-                          width: 170,
-                          alignment: Alignment.centerRight,
+                          width: 150,
+                          alignment: Alignment.centerLeft,
                           child: RichText(
-                            textAlign: TextAlign.right,
+                            textAlign: TextAlign.left,
                             overflow: TextOverflow.ellipsis,
                             maxLines: 5,
                             text: TextSpan(
@@ -292,7 +294,7 @@ Widget buildPost(context,int index) {
                                 ),
                                 Container(
                                   height: 22,
-                                  margin: EdgeInsets.only(right: 5),
+                                  margin: EdgeInsets.only(left: 5),
                                   padding: EdgeInsets.only(left: 6, right: 6),
                                   alignment: Alignment.center,
                                   decoration: BoxDecoration(
@@ -364,10 +366,10 @@ Widget buildPost(context,int index) {
                 ),
                 Container(
                   margin: EdgeInsets.only(bottom: 10, top: 10),
-                  width: 250,
-                  alignment: Alignment.bottomRight,
+
+                  alignment: Alignment.bottomLeft,
                   child: RichText(
-                    textAlign: TextAlign.right,
+                    textAlign: TextAlign.left,
                     overflow: TextOverflow.ellipsis,
                     maxLines: 2,
                     text: TextSpan(
@@ -406,7 +408,7 @@ Widget buildPost(context,int index) {
                         ),
                         Container(
                           height: 22,
-                          margin: EdgeInsets.only(right: 5),
+                          margin: EdgeInsets.only(left: 5),
                           padding: EdgeInsets.only(left: 6, right: 6),
                           alignment: Alignment.center,
                           decoration: BoxDecoration(

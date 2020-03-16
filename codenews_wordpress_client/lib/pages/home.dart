@@ -259,22 +259,22 @@ class _MyAppState extends State<MyApp> {
         enablePullUp: true,
         header: WaterDropHeader(
           waterDropColor: maincolors().maincolor,
-          complete: Text("تم التحديث!"),
+          complete: Text("All Updated!"),
         ),
         footer: CustomFooter(
           loadStyle: LoadStyle.ShowWhenLoading,
           builder: (BuildContext context, LoadStatus mode) {
             Widget body;
             if (mode == LoadStatus.idle) {
-              body = Text("لا يوجد المزيد");
+              body = Text("No more news");
             } else if (mode == LoadStatus.loading) {
               body = CupertinoActivityIndicator();
             } else if (mode == LoadStatus.failed) {
-              body = Text("فشل تحميل الاخبار! حاول مجدداً");
+              body = Text("News failed to download! Try againً");
             } else if (mode == LoadStatus.canLoading) {
-              body = Text("افلت لمشاهدة المزيد من الاخبار");
+              body = Text("release to see more news");
             } else {
-              body = Text("لا توجد اخبار اخرى");
+              body = Text("no more news");
             }
             return Container(
               height: 55.0,

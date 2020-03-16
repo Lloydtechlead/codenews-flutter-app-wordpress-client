@@ -43,8 +43,8 @@ Widget fetch_cat(context,int index) {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Text(
-              Uncate(index),
-              textAlign: TextAlign.right,
+              cat[index].name,
+              textAlign: TextAlign.left,
               style: TextStyle(
                   color: maincolors().maincolor,
                   fontWeight: FontWeight.w700,
@@ -52,6 +52,8 @@ Widget fetch_cat(context,int index) {
             ),
             Container(
                 color: maincolors().sec_color,
+                
+
                 padding: EdgeInsets.symmetric(vertical: 10,horizontal: 20),
                 child: Text(cat[index].count.toString(), style: TextStyle(fontWeight: FontWeight.w700),))
           ],
@@ -75,10 +77,3 @@ Widget fetch_cat(context,int index) {
 
 
 
-String Uncate(int index) {
-  if (cat[index].name == 'Uncategorized') {
-    return "غير مصنف";
-  } else {
-    return cat[index].name;
-  }
-}
