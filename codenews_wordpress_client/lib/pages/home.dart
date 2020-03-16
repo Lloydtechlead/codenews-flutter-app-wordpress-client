@@ -169,12 +169,12 @@ class _MyAppState extends State<MyApp> {
             items: <BottomNavyBarItem>[
               BottomNavyBarItem(
                 activeColor: maincolors().maincolor,
-                title: Text('last news'),
+                title: Text('last news' ,style: TextStyle(fontSize: 18),),
                 icon: Icon(MyIcons.Home),
               ),
               BottomNavyBarItem(
                   activeColor: maincolors().maincolor,
-                  title: Text('categories'),
+                  title: Text('categories',style: TextStyle(fontSize: 18),),
                   icon: Icon(MyIcons.menu)),
             ],
           ),
